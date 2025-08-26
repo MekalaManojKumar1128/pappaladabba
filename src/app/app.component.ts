@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { NotificationComponent } from "./shared/notification/notification/notification.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [
+    HeaderComponent,
+    FooterComponent,
+    CommonModule,
+    RouterOutlet,
+    NotificationComponent
+],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'pappaladabba';

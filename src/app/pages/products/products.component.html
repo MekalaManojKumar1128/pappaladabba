@@ -1,0 +1,143 @@
+<main class="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 py-6 sm:py-8 md:py-12">
+  <div class="container mx-auto px-3 sm:px-4 md:px-6 max-w-7xl">
+
+    <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-center text-gray-800 mb-8 md:mb-12 leading-tight drop-shadow-sm">
+      Explore Our <span class="text-pink-600">Delicious</span> Creations
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
+
+      <aside class="bg-white p-4 sm:p-6 rounded-xl shadow-md border border-gray-100 h-fit 
+                     md:sticky md:top-4 md:col-span-1 transition-all duration-300">
+        <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-200 md:pb-4">
+          <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">Categories</h2>
+          <button (click)="toggleMenu()"
+            class="p-2 rounded-full transition-colors duration-200 hover:bg-gray-200 md:hidden 
+                   focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+            [attr.aria-expanded]="isMenuOpen" aria-controls="mobile-menu-items">
+            <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300"
+              [ngClass]="{ 'rotate-0': !isMenuOpen, 'rotate-180': isMenuOpen }" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="hidden md:space-y-3 md:block">
+          <li *ngFor="let category of categories">
+            <button
+              (click)="filterProductsByCategory(category.value)"
+              [class.bg-purple-700]="selectedCategory === category.value"
+              [class.text-white]="selectedCategory === category.value"
+              [class.font-semibold]="selectedCategory === category.value"
+              class="w-full text-left py-2.5 px-4 rounded-lg font-medium transition-all duration-300
+                     bg-gray-100 text-gray-700 hover:bg-purple-600 hover:text-white focus:outline-none 
+                     focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+              {{ category.name }}
+            </button>
+          </li>
+        </ul>
+
+        <ul *ngIf="isMenuOpen" id="mobile-menu-items" class="space-y-2 md:hidden mt-3">
+          <li *ngFor="let category of categories">
+            <button
+              (click)="filterProductsByCategory(category.value)"
+              [class.bg-purple-700]="selectedCategory === category.value"
+              [class.text-white]="selectedCategory === category.value"
+              [class.font-semibold]="selectedCategory === category.value"
+              [attr.aria-current]="selectedCategory === category.value ? 'true' : null"
+              class="w-full text-left py-3 px-4 rounded-lg font-medium transition-all duration-300
+                     bg-gray-100 text-gray-700 hover:bg-purple-600 hover:text-white focus:outline-none 
+                     focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+              {{ category.name }}
+            </button>
+          </li>
+        </ul>
+      </aside>
+
+      <section #productsSection class="md:col-span-3">
+        <div *ngIf="displayProducts && displayProducts.length > 0; else noProducts"
+             class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+          
+          <div *ngFor="let product of displayProducts; trackBy: trackByProductId" #productCard
+            class="bg-white rounded-xl shadow-lg border border-gray-100 flex flex-col group
+                   overflow-hidden transition-transform duration-300 md:hover:scale-105 md:hover:shadow-xl">
+            
+            <a [routerLink]="'/product-details/' + product.id" class="block">
+              <div class="w-full h-48 sm:h-56 overflow-hidden">
+                <img [src]="product.imageUrls[0]" (error)="$any($event.target).src='assets/images/Sweets/Default.jpg'"  [alt]="product.name"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110">
+              </div>
+              <div class="p-4 sm:p-5">
+                <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-1 truncate group-hover:text-purple-700 transition">
+                  {{ product.name }}
+                </h3>
+                <p class="text-pink-600 font-bold text-xl sm:text-2xl mb-2">
+                  ₹ {{ product.basePrice * (product.selectedUnit.priceFactor || 1) | number:'1.2-2' }}
+                </p>
+              </div>
+            </a>
+
+            <div class="px-4 sm:px-5 pb-4 mt-auto">
+              <div class="mb-3">
+                <select [id]="'unit-select-' + product.id" [ngModel]="product.selectedUnit.label"
+                  (ngModelChange)="onUnitChange(product, $event)"
+                  class="w-full rounded-md border-gray-300 shadow-sm text-sm sm:text-base py-2 px-3 
+                         focus:ring-2 focus:ring-purple-500 focus:border-purple-500 cursor-pointer">
+                  <option *ngFor="let unit of product.units" [value]="unit.label">
+                    {{ unit.label }} (₹ {{ product.basePrice * unit.priceFactor | number:'1.2-2' }})
+                  </option>
+                </select>
+              </div>
+
+              <div class="flex items-center justify-between mb-3 bg-gray-100 rounded-lg p-2">
+                <div class="flex items-center space-x-2">
+                  <button (click)="decrementQuantity(product)" [disabled]="product.selectedQuantity <= 1"
+                    class="p-2 rounded-full bg-gray-300 hover:bg-gray-400 disabled:opacity-50">
+                    -
+                  </button>
+                  <input type="number" min="1" [value]="product.selectedQuantity"
+                    (change)="onQuantityInputChange(product, $event)"
+                    class="w-14 text-center border-gray-300 rounded-md shadow-sm text-base font-semibold">
+                  <button (click)="incrementQuantity(product)"
+                    class="p-2 rounded-full bg-gray-300 hover:bg-gray-400">
+                    +
+                  </button>
+                </div>
+              </div>
+
+              <button (click)="addToCart(product)"
+                class="w-full bg-pink-600 text-white py-2.5 sm:py-3 rounded-lg text-base sm:text-lg font-semibold
+                       hover:bg-pink-700 active:bg-pink-800 transition-colors shadow-md focus:ring-2 focus:ring-pink-500">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <ng-template #noProducts>
+          <div class="flex flex-col items-center justify-center py-16 sm:py-20 px-4 text-center">
+            <img src="assets/images/no-products.png" alt="No products available"
+              class="w-32 sm:w-40 md:w-56 mb-6 opacity-80">
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-700 mb-2">New items coming soon!</h2>
+            <p class="text-gray-500 text-base sm:text-lg max-w-md">
+              Oops! We couldn’t find any items in this category right now. 
+              Try exploring <span class="text-pink-600 font-semibold">All Products</span> or check back later.
+            </p>
+            <button (click)="filterProductsByCategory('all')"
+              class="mt-6 px-5 py-2 sm:px-6 sm:py-3 bg-pink-600 text-white rounded-lg font-semibold 
+                     hover:bg-pink-700 focus:ring-2 focus:ring-pink-500">
+              View All Products
+            </button>
+          </div>
+        </ng-template>
+
+        <app-load-more 
+        [visibleCount]="visibleCount"
+        [totalCount]="filteredProducts.length"
+        (loadMoreClicked)="loadMore()">
+      </app-load-more>
+
+      </section>
+    </div>
+  </div>
+</main>

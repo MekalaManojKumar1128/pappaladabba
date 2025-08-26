@@ -1,0 +1,6 @@
+<div [ngClass]="getNotificationClasses()" *ngIf="currentNotification">
+    <div class="notification-content">
+      <p>{{ currentNotification.message }}</p>
+      <button class="dismiss-button" (click)="dismissNotification()">X</button>
+    </div>
+  </div>

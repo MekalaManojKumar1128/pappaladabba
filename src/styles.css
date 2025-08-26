@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.scss */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add a global font for consistency */
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  /* Ensure body takes full viewport height */
+  min-height: 100vh;
+  /* Use flexbox to enable sticky footer behavior */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the root Angular app component also takes full height */
+app-root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow app-root to grow and fill available space */
+}
+
+/* This will make the router-outlet content expand to fill remaining space */
+router-outlet + * { /* Selects the element immediately following router-outlet */
+  flex-grow: 1;
+  display: flex; /* Ensure the component itself is a flex container */
+  flex-direction: column; /* Arrange its content vertically */
+}
+
+/* Ensure the main content area within components expands to fill remaining space */
+main {
+  flex-grow: 1; /* Ensure main content area expands within its parent */
+  display: flex;
+  flex-direction: column;
+}

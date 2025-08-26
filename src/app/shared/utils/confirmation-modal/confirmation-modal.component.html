@@ -1,0 +1,29 @@
+<!-- src/app/components/modal/confirmation-modal.component.html -->
+<div class="fixed inset-0 bg-gray-900 bg-opacity-75 overflow-y-auto h-full w-full z-50 flex items-center justify-center transition-opacity duration-300">
+    <div class="relative m-4 p-6 w-full max-w-sm sm:max-w-md mx-auto bg-white rounded-xl shadow-2xl transform transition-transform duration-300 scale-95 opacity-0"
+         [class.scale-100]="true"
+         [class.opacity-100]="true">
+      <div class="text-center">
+        <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-red-100 mb-4">
+          <svg class="h-8 w-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="iconPath"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold leading-6 text-gray-900 mb-2">{{ title }}</h3>
+        <div class="mb-4">
+          <p class="text-sm text-gray-500">{{ message }}</p>
+        </div>
+        <div class="flex flex-col sm:flex-row-reverse justify-center space-y-3 sm:space-y-0 sm:space-x-3 sm:space-x-reverse">
+          <button (click)="onConfirm()"
+                  class="w-full sm:w-auto px-6 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+            Confirm
+          </button>
+          <button (click)="onCancel()"
+                  class="w-full sm:w-auto px-6 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg shadow-sm hover:bg-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

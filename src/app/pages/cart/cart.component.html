@@ -1,0 +1,158 @@
+<main class="min-h-screen bg-gray-50 py-8 md:py-12">
+  <div class="container mx-auto px-4">
+    <div class="bg-white rounded-lg shadow-xl p-4 md:p-8">
+      <h1 class="text-3xl font-extrabold text-gray-900 text-center mb-6 md:mb-8">Your Shopping Cart</h1>
+
+      <ng-container *ngIf="(cartItems$ | async)?.length === 0; else cartContent">
+        <div class="text-center py-12 md:py-16">
+          <p class="text-gray-600 text-lg mb-4">Your cart is currently empty.</p>
+          <a routerLink="/products" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 transform hover:scale-105">
+            Start Shopping
+          </a>
+        </div>
+      </ng-container>
+
+      <ng-template #cartContent>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          <div class="lg:col-span-2 space-y-4">
+            
+            <div class="flex items-center p-4 bg-gray-100 rounded-lg shadow-sm border border-gray-200">
+              <div class="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  [checked]="isAllSelected()"
+                  (change)="toggleSelectAll()"
+                  class="h-5 w-5 text-purple-600 rounded border-gray-300 focus:ring-purple-500 cursor-pointer transition-all duration-150 transform hover:scale-110"
+                  aria-label="Select all items"
+                />
+                <label class="text-gray-700 font-medium select-none text-sm sm:text-base">Select All</label>
+              </div>
+              <button
+                (click)="openConfirmationModal()"
+                [disabled]="selectedItems.size === 0"
+                class="flex items-center space-x-2 text-red-500 hover:text-red-700 transition-colors duration-200 p-2 rounded-md disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 ml-auto">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/>
+                </svg>
+              </button>
+            </div>
+
+            <div *ngFor="let item of cartItems$ | async" class="bg-white rounded-lg shadow-sm p-4 relative border border-gray-200 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6">
+              
+              <button (click)="openSingleItemConfirmationModal(item.product.id, item.product.selectedUnit.label)"
+                      class="absolute top-2 right-2 text-red-400 hover:text-red-500 transition-colors duration-200 p-2 rounded-full z-10 transform hover:scale-110"
+                      aria-label="Remove item">
+                      
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/>
+                      </svg>
+              </button>
+
+              <div class="flex items-start gap-4 flex-grow w-full sm:w-auto">
+                <div class="flex-shrink-0 mt-1">
+                  <input
+                    type="checkbox"
+                    [checked]="isItemSelected(getUniqueItemKey(item))"
+                    (change)="toggleSelection(getUniqueItemKey(item))"
+                    class="h-5 w-5 text-purple-600 rounded border-gray-300 focus:ring-purple-500 cursor-pointer transition-all duration-150 transform hover:scale-110"
+                    [attr.aria-label]="'Select ' + item.product.name"
+                  />
+                </div>
+                <img [src]="item.product.imageUrls[0]" (error)="$any($event.target).src='assets/images/Sweets/Default.jpg'" [alt]="item.product.name" class="w-24 h-24 object-cover rounded-md flex-shrink-0">
+                <div class="flex-1 min-w-0 flex flex-col justify-center">
+                  <h2 class="text-base font-bold text-gray-800 truncate mb-1">{{ item.product.name }}</h2>
+                  <p class="text-gray-600 text-sm mb-1">Unit: {{ item.product.selectedUnit.label }}</p>
+                  <p class="text-pink-600 font-bold text-xl mt-2">
+                    ₹ {{ (item.product.basePrice * item.product.selectedUnit.priceFactor * item.product.selectedQuantity) | number:'1.2-2' }}
+                    <span class="text-gray-500 text-sm ml-2 font-normal">({{ item.product.selectedQuantity }} x ₹{{ item.product.basePrice * item.product.selectedUnit.priceFactor | number:'1.2-2' }})</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex justify-center w-full sm:w-auto mt-4 sm:mt-0">
+                <div class="flex items-center border border-gray-300 rounded-md overflow-hidden shadow-sm transition-all duration-200 hover:shadow-lg">
+                  <button
+                    (click)="updateItemQuantity(item, item.product.selectedQuantity - 1)"
+                    [disabled]="item.product.selectedQuantity <= 1"
+                    class="p-2 bg-gray-100 text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:z-10 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path></svg>
+                  </button>
+                  <input
+                    type="number"
+                    id="quantity-{{item.product.id}}"
+                    [value]="item.product.selectedQuantity"
+                    (change)="onQuantityInputChange(item, $event)"
+                    min="1"
+                    class="w-12 text-center text-gray-800 font-semibold focus:outline-none focus:ring-0 border-none px-0 py-1 bg-white"
+                    aria-label="Item quantity"
+                  >
+                  <button
+                    (click)="updateItemQuantity(item, item.product.selectedQuantity + 1)"
+                    class="p-2 bg-gray-100 text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:z-10 transition-colors duration-200">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between w-full sm:w-auto mt-4 sm:mt-0">
+                <p class="font-bold text-gray-800 text-lg flex-1 text-left sm:text-right mr-4 sm:mr-0">
+                </p>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="lg:col-span-1 bg-white rounded-lg shadow-sm p-6 border border-gray-200 h-fit">
+            <div>
+              <h2 class="text-xl font-bold text-gray-800 mb-4">Order Summary</h2>
+              <div class="flex justify-between items-center mb-2">
+                <p class="text-gray-700">Items ({{ cartItemCount$ | async }})</p>
+                <p class="font-semibold text-gray-800">₹ {{ cartTotal$ | async | number:'1.2-2' }}</p>
+              </div>
+              <div class="flex justify-between items-center mb-4 border-b pb-4">
+                <p class="text-gray-700">Shipping</p>
+                <p class="font-semibold text-green-600">T&C</p>
+              </div>
+              <div class="flex justify-between items-center mb-6">
+                <p class="text-xl font-bold text-gray-900">Total</p>
+                <p class="text-xl font-bold text-pink-600">₹ {{ cartTotal$ | async | number:'1.2-2' }}</p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <button (click)="checkout()"
+                class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 transform hover:scale-105"
+              >
+                Proceed to Checkout
+              </button>
+
+              <div *ngIf="showSharedUrl && sharedCartUrl" class="mt-4 p-3 bg-yellow-100 border border-yellow-400 text-yellow-800 rounded-md">
+                <p class="text-sm font-semibold mb-2">Share this link:</p>
+                <input type="text" [value]="sharedCartUrl" readonly class="w-full px-2 py-1 text-sm bg-yellow-50 border border-yellow-300 rounded-md font-mono select-all"
+                       (click)="copySharedUrl($event)">
+                <p class="text-xs mt-2">
+                  <strong class="text-red-700">Note:</strong> This is a **simulated link** using your browser's local storage. It will **only work on this specific browser** and will not persist if you clear your browser data or share it with others. For real sharing, a backend is required.
+                </p>
+              </div>
+
+              <button (click)="shareViaWhatsApp()"
+                      class="mt-3 w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200 shadow-md flex items-center justify-center space-x-2 transform hover:scale-105">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.041 2c-5.523 0-10 4.477-10 10 0 1.954.557 3.805 1.523 5.421l-1.393 5.09c-.198.72.632 1.488 1.348 1.251l5.025-1.748A9.957 9.957 0 0012.041 22c5.523 0 10-4.477 10-10 0-5.523-4.477-10-10-10zm-.188 3.518c2.81 0 5.093 2.283 5.093 5.093 0 2.81-2.283 5.093-5.093 5.093-2.81 0-5.093-2.283-5.093-5.093 0-2.81 2.283-5.093 5.093-5.093zm-1.84 2.274l-2.023 2.023c-.156.156-.407.156-.563 0l-.337-.337c-.156-.156-.156-.407 0-.563l1.198-1.198c.156-.156.407-.156.563 0l.965.965c.156.156.407.156.563 0l2.023-2.023c.156-.156.407-.156.563 0l.337.337c.156.156.156.407 0 .563l-1.198 1.198c-.156.156-.407.156-.563 0z"/>
+                </svg>
+                <span>Share on WhatsApp</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <app-confirmation-modal
+        *ngIf="showConfirmationModal"
+        [title]="modalTitle"
+        [message]="modalMessage"
+        (confirm)="confirmDeletion()"
+        (cancel)="cancelDeletion()">
+      </app-confirmation-modal>
+    </div>
+  </div>
+</main>

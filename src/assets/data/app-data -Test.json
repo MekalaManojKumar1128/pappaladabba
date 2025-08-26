@@ -1,0 +1,188 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "name": "Bellam Sunnundalu",
+        "imageUrls": [
+          "https://pappaladabba.com/wp-content/uploads/2024/01/S_0007.jpg",
+          "https://via.placeholder.com/600x400/FFDDC1/804000?text=Sunnundalu+Side",
+          "https://via.placeholder.com/600x400/FFFACD/804000?text=Sunnundalu+Pack"
+        ],
+        "description": "Traditional Andhra sweet made from roasted urad dal, jaggery, and ghee. A rich and nutritious delight.",
+        "basePrice": 1.00,
+        "units": [
+          { "label": "250g", "priceFactor": 0.25 },
+          { "label": "500g", "priceFactor": 0.5 },
+          { "label": "1kg", "priceFactor": 1 }
+        ],
+        "category": "sweets"
+      },
+      {
+        "id": "2",
+        "name": "Bellam Gavvalu",
+        "imageUrls": ["https://pappaladabba.com/wp-content/uploads/2024/01/S_0002.jpg"],
+        "description": "Crispy, shell-shaped sweet made with jaggery and flour, a popular snack during festivals.",
+        "basePrice": 450.00,
+        "units": [
+          { "label": "250g", "priceFactor": 0.25 },
+          { "label": "500g", "priceFactor": 0.5 },
+          { "label": "1kg", "priceFactor": 1 }
+        ],
+        "category": "sweets"
+      },
+      {
+        "id": "3",
+        "name": "Boondi Achu",
+        "imageUrls": ["https://pappaladabba.com/wp-content/uploads/2024/01/1000-X-1000_v01ba.jpg"],
+        "description": "A unique sweet made from boondi (fried chickpea flour pearls) pressed into a block with jaggery syrup.",
+        "basePrice": 680.00,
+        "units": [
+          { "label": "250g", "priceFactor": 0.25 },
+          { "label": "500g", "priceFactor": 0.5 },
+          { "label": "1kg", "priceFactor": 1 }
+        ],
+        "category": "sweets"
+      },
+      {
+        "id": "4",
+        "name": "Boondi Laddu",
+        "imageUrls": ["https://pappaladabba.com/wp-content/uploads/2023/10/1000-X-1000-v02BL-300x300.jpg"],
+        "description": "Classic Indian sweet made from small, fried chickpea flour pearls, soaked in sugar syrup and shaped into laddus.",
+        "basePrice": 320.00,
+        "units": [
+          { "label": "250g", "priceFactor": 0.25 },
+          { "label": "500g", "priceFactor": 0.5 },
+          { "label": "1kg", "priceFactor": 1 }
+        ],
+        "category": "sweets"
+      },
+      {
+        "id": "5",
+        "name": "Dry Fruit Laddu",
+        "imageUrls": ["https://pappaladabba.com/wp-content/uploads/2023/10/1000x1000v02dfl-300x300.jpg"],
+        "description": "Healthy and energy-rich laddus packed with various dry fruits and nuts, bound with dates or jaggery.",
+        "basePrice": 180.00,
+        "units": [
+          { "label": "1 Piece", "priceFactor": 1 },
+          { "label": "5 Pieces", "priceFactor": 5 },
+          { "label": "10 Pieces", "priceFactor": 10 }
+        ],
+        "category": "sweets"
+      },
+      {
+        "id": "6",
+        "name": "Palli Karampodi",
+        "imageUrls": ["https://pappaladabba.com/wp-content/uploads/2023/10/Palli-Karampodi-v01-300x300.jpg"],
+        "description": "Spicy peanut powder, a staple in Andhra cuisine, perfect with idli, dosa, or rice.",
+        "basePrice": 120.00,
+        "units": [
+          { "label": "250g", "priceFactor": 1 },
+          { "label": "500g", "priceFactor": 2 }
+        ],
+        "category": "podulu"
+      },
+      {
+        "id": "7",
+        "name": "Gongura Pickle",
+        "imageUrls": ["https://pappaladabba.com/wp-content/uploads/2024/01/P_0003-1.jpg"],
+        "description": "Tangy and spicy pickle made from sorrel leaves, a signature Andhra delicacy.",
+        "basePrice": 280.00,
+        "units": [
+          { "label": "250g", "priceFactor": 1 },
+          { "label": "500g", "priceFactor": 2 }
+        ],
+        "category": "pickles"
+      },
+      {
+        "id": "8",
+        "name": "Chekkalu (Crispy Snacks)",
+        "imageUrls": ["https://pappaladabba.com/wp-content/uploads/2024/01/S_0016.jpg"],
+        "description": "Crispy, savory rice flour crackers, lightly spiced and perfect with tea.",
+        "basePrice": 200.00,
+        "units": [
+          { "label": "250g", "priceFactor": 1 },
+          { "label": "500g", "priceFactor": 2 }
+        ],
+        "category": "snacks"
+      },
+      {
+        "id": "9",
+        "name": "Ariselu (Traditional Sweet)",
+        "imageUrls": ["https://pappaladabba.com/wp-content/uploads/2024/01/S_0004.jpg"],
+        "description": "Deep-fried sweet made from rice flour and jaggery, a festive favorite.",
+        "basePrice": 500.00,
+        "units": [
+          { "label": "250g", "priceFactor": 0.25 },
+          { "label": "500g", "priceFactor": 0.5 },
+          { "label": "1kg", "priceFactor": 1 }
+        ],
+        "category": "sweets"
+      },
+      {
+        "id": "10",
+        "name": "Boondi Laddu",
+        "imageUrls": ["https://pappaladabba.com/wp-content/uploads/2024/01/S_0006.jpg"],
+        "description": "Another variant of Boondi Laddu, known for its distinct texture and sweetness.",
+        "basePrice": 380.00,
+        "units": [
+          { "label": "250g", "priceFactor": 0.25 },
+          { "label": "500g", "priceFactor": 0.5 },
+          { "label": "1kg", "priceFactor": 1 }
+        ],
+        "category": "sweets"
+      },
+      {
+        "id": "11",
+        "name": "Mango Pickle",
+        "imageUrls": ["https://pappaladabba.com/wp-content/uploads/2024/01/P_0001.jpg"],
+        "description": "Classic tangy and spicy raw mango pickle, a must-have accompaniment for any meal.",
+        "basePrice": 350.00,
+        "units": [
+          { "label": "250g", "priceFactor": 1 },
+          { "label": "500g", "priceFactor": 2 }
+        ],
+        "category": "pickles"
+      },
+      {
+        "id": "12",
+        "name": "Murukulu",
+        "imageUrls": ["https://pappaladabba.com/wp-content/uploads/2024/01/S_0017.jpg"],
+        "description": "Crunchy, spiral-shaped savory snack made from rice flour and urad dal flour.",
+        "basePrice": 150.00,
+        "units": [
+          { "label": "250g", "priceFactor": 1 },
+          { "label": "500g", "priceFactor": 2 }
+        ],
+        "category": "snacks"
+      },
+      {
+        "id": "13",
+        "name": "Kandi Podi",
+        "imageUrls": ["https://pappaladabba.com/wp-content/uploads/2023/10/Kandi-Podi.jpg"],
+        "description": "Flavorful lentil powder, a traditional Andhra accompaniment for rice with ghee.",
+        "basePrice": 100.00,
+        "units": [
+          { "label": "250g", "priceFactor": 1 },
+          { "label": "500g", "priceFactor": 2 }
+        ],
+        "category": "podulu"
+      }
+    ],
+    "categories": [
+      { "name": "All Products", "value": "all" },
+      { "name": "Sweets", "value": "sweets", "imageUrl": "https://pappaladabba.com/wp-content/uploads/2024/01/S_0007.jpg" },
+      { "name": "Snacks", "value": "snacks", "imageUrl": "https://pappaladabba.com/wp-content/uploads/2024/01/S_0016.jpg" },
+      { "name": "Pickles", "value": "pickles", "imageUrl": "https://pappaladabba.com/wp-content/uploads/2024/01/P_0003-1.jpg" },
+      { "name": "Podulu", "value": "podulu", "imageUrl": "https://pappaladabba.com/wp-content/uploads/2023/10/Palli-Karampodi-v01.jpg" },
+      { "name": "Vadiyaalu", "value": "vadiyaalu", "imageUrl": "https://pappaladabba.com/wp-content/uploads/2024/01/Biyyam-Pindi-Vadiyaalu-e1704541649774.jpg" },
+      { "name": "Bulk Orders", "value": "bulk-orders", "imageUrl": "https://pappaladabba.com/wp-content/uploads/2023/10/1000X1000v01pal.jpg" }
+    ],
+    "featuredProducts": [
+      { "id": "1", "name": "Bellam Gavvalu", "price": 120, "imageUrl": "https://pappaladabba.com/wp-content/uploads/2024/01/1000-X1000_v02bm.jpg" },
+      { "id": "2", "name": "Kaju Katli", "price": 250, "imageUrl": "https://pappaladabba.com/wp-content/uploads/2023/10/1000X1000v02kkl-300x300.jpg" },
+      { "id": "3", "name": "Nuvvula Ariselu", "price": 200, "imageUrl": "https://pappaladabba.com/wp-content/uploads/2023/10/1000-X-1000-v01-nar.jpg" },
+      { "id": "4", "name": "Pootharekulu", "price": 30, "imageUrl": "https://pappaladabba.com/wp-content/uploads/2024/01/puthav01.jpg" },
+      { "id": "5", "name": "Palakova", "price": 200, "imageUrl": "https://pappaladabba.com/wp-content/uploads/2023/10/1000X1000v02pal.jpg" }
+    ]
+  }
+  

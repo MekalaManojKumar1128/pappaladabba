@@ -1,0 +1,73 @@
+<main class="min-h-screen bg-gray-50 py-8 md:py-12">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+        <h1 class="text-3xl font-extrabold text-gray-900 text-center mb-8">Shared Cart View</h1>
+  
+        <div *ngIf="isLoading" class="text-center py-16">
+          <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4 mx-auto"></div>
+          <p class="text-gray-600 text-lg">Loading shared cart...</p>
+        </div>
+  
+        <ng-container *ngIf="!isLoading && !cartFound">
+          <div class="text-center py-16">
+            <p class="text-red-600 text-lg mb-4">Oops! This shared cart link is invalid or expired.</p>
+            <p class="text-gray-600 mb-4">Please ensure you have the correct link or ask the user to share it again.</p>
+            <a routerLink="/products" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200">
+              Go to Products
+            </a>
+          </div>
+        </ng-container>
+  
+        <ng-container *ngIf="!isLoading && cartFound">
+          <p class="text-center text-gray-600 text-lg mb-6">Viewing shared cart for ID: <span class="font-mono text-purple-600">{{ cartId }}</span></p>
+  
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-6">
+              <div *ngFor="let item of sharedCartItems" class="flex items-center bg-gray-50 rounded-lg shadow-sm p-4">
+                <img [src]="item.product.imageUrls[0]" [alt]="item.product.name" class="w-24 h-24 object-cover rounded-md mr-4">
+                <div class="flex-grow">
+                  <h2 class="text-lg font-semibold text-gray-800">{{ item.product.name }}</h2>
+                  <p class="text-gray-600 text-sm">Unit: {{ item.product.selectedUnit.label }}</p>
+                  <p class="text-pink-600 font-bold mt-1">₹ {{ item.product.basePrice * item.product.selectedUnit.priceFactor| number:'1.2-2' }}</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <span class="text-gray-700 font-medium">Qty: {{ item.product.selectedQuantity }}</span>
+                </div>
+              </div>
+            </div>
+  
+            <div class="lg:col-span-1 bg-gray-50 rounded-lg shadow-sm p-6 flex flex-col justify-between">
+              <div>
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Shared Cart Summary</h2>
+                <div class="flex justify-between items-center mb-2">
+                  <p class="text-gray-700">Items ({{ cartItemCount }})</p>
+                  <p class="font-semibold text-gray-800">₹ {{ cartTotal | number:'1.2-2' }}</p>
+                </div>
+                <div class="flex justify-between items-center mb-4 border-b pb-4">
+                  <p class="text-gray-700">Shipping</p>
+                  <p class="font-semibold text-green-600">FREE</p>
+                </div>
+                <div class="flex justify-between items-center mb-6">
+                  <p class="text-xl font-bold text-gray-900">Total</p>
+                  <p class="text-xl font-bold text-pink-600">₹ {{ cartTotal | number:'1.2-2' }}</p>
+                </div>
+              </div>
+  
+              <div class="space-y-4">
+                <button routerLink="/products"
+                  class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                >
+                  Go to Products
+                </button>
+                </div>
+            </div>
+          </div>
+  
+          <div class="mt-8 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md" role="alert">
+            <p class="font-bold">Important Note:</p>
+            <p class="text-sm">This is a **simulated shared cart view** using your browser's local storage. This link will **only work on this specific browser** and will not display the cart if you clear your browser data or share it with others. For a real-world sharing feature, a backend server and database are required to store and retrieve persistent cart data.</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </main>

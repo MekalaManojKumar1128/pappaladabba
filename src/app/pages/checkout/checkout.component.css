@@ -1,0 +1,20 @@
+/* src/app/pages/checkout/checkout.component.scss */
+
+/* No custom SCSS needed for this example, as Tailwind CSS covers most styling.
+   Add custom styles here if you want to override or add specific element styling
+   that isn't easily done with Tailwind classes directly in the HTML. */
+
+   .checkout-container {
+    /* For instance, if you wanted a specific background pattern or complex animation */
+  }
+  
+  .cart-summary, .shipping-payment-section {
+    /* Specific shadows or border styles not covered by Tailwind defaults */
+  }
+  
+  /* Example for focus styling if needed beyond Tailwind's focus-ring */
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.4); /* Custom focus ring */
+  }
+  

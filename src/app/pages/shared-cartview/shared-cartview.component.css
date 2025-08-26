@@ -1,0 +1,16 @@
+/* src/app/components/shared-cart-view/shared-cart-view.component.scss */
+.loader {
+    border-top-color: #8a2be2; /* Example color, customize as needed */
+    -webkit-animation: spinner 1.5s linear infinite;
+    animation: spinner 1.5s linear infinite;
+  }
+  
+  @-webkit-keyframes spinner {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
