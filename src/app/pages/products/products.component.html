@@ -53,11 +53,10 @@
           </li>
         </ul>
       </aside>
-
       <section #productsSection class="md:col-span-3">
-        <div *ngIf="displayProducts && displayProducts.length > 0; else noProducts"
+        <div *ngIf="displayProducts && displayProducts.length > 0;"
              class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-          
+             <app-spinner *ngIf="isLoading"></app-spinner>
           <div *ngFor="let product of displayProducts; trackBy: trackByProductId" #productCard
             class="bg-white rounded-xl shadow-lg border border-gray-100 flex flex-col group
                    overflow-hidden transition-transform duration-300 md:hover:scale-105 md:hover:shadow-xl">
@@ -114,7 +113,7 @@
           </div>
         </div>
 
-        <ng-template #noProducts>
+        <ng-template  #noProducts >
           <div class="flex flex-col items-center justify-center py-16 sm:py-20 px-4 text-center">
             <img src="assets/images/no-products.png" alt="No products available"
               class="w-32 sm:w-40 md:w-56 mb-6 opacity-80">

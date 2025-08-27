@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 import { NotificationService } from '../../services/notification/notification.service';
 import { LoadMoreComponent } from '../../shared/utils/load-more/load-more.component';
 import { Category } from '../../shared/models/category.model';
+import { SpinnerComponent } from '../../shared/utils/spinner/spinner.component';
 
 // Define an interface for your category data
 
@@ -17,7 +18,7 @@ import { Category } from '../../shared/models/category.model';
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule,LoadMoreComponent],
+  imports: [CommonModule, RouterModule, FormsModule,LoadMoreComponent,SpinnerComponent],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -43,6 +44,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
   displayProducts: Product[] = [];
   selectedCategory: string = 'all';
   isMenuOpen = false;
+  isLoading = true;
 
   // Pagination properties
   visibleCount: number = 4;
@@ -53,6 +55,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 
   // --- Lifecycle Methods ---
   ngOnInit(): void {
+    this.isLoading = true;
     this.categoriesSubscription = this.dataService.getCategories().subscribe(categories => {
       this.categories = categories;
       this.cdr.markForCheck();
@@ -60,6 +63,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.allProducts=[];
     this.productsSubscription = this.dataService.getAllProducts().subscribe(products => {
       this.allProducts = products;
+      this.isLoading = false;
       
       // Apply initial filter from query param
       this.route.queryParamMap.subscribe(params => {
@@ -80,7 +84,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
   filterProductsByCategory(category: string): void {
     this.visibleCount = this.loadStep;
     this.selectedCategory = category;
-
+    this.isLoading = true;
     if (this.selectedCategory === 'all') {
       this.filteredProducts = this.allProducts.map(product => ({
         ...product,
@@ -102,6 +106,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.scrollToProducts();
     this.isMenuOpen = false;
     this.cdr.markForCheck();
+    this.isLoading = false;
   }
 
   toggleMenu(): void {
