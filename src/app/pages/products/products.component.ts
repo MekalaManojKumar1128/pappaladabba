@@ -8,14 +8,11 @@ import { FormsModule } from '@angular/forms';
 import { DataService } from '../../services/data/dataservice.service';
 import { Subscription } from 'rxjs';
 import { NotificationService } from '../../services/notification/notification.service';
-import { Observable } from 'rxjs';
 import { LoadMoreComponent } from '../../shared/utils/load-more/load-more.component';
+import { Category } from '../../shared/models/category.model';
 
 // Define an interface for your category data
-interface Category {
-  name: string;
-  value: string;
-}
+
 
 @Component({
   selector: 'app-products',
@@ -60,7 +57,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
       this.categories = categories;
       this.cdr.markForCheck();
     });
-
+    this.allProducts=[];
     this.productsSubscription = this.dataService.getAllProducts().subscribe(products => {
       this.allProducts = products;
       
@@ -91,6 +88,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
         selectedUnit: product.selectedUnit || product.units[0]
       }));
     } else {
+      
       this.filteredProducts = this.allProducts
         .filter(product => product.category === this.selectedCategory)
         .map(product => ({

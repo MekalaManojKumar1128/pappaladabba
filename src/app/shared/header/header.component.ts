@@ -3,11 +3,12 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../services/cart.service'; // Import CartService
 import { Observable, Subscription } from 'rxjs'; // Import Observable and Subscription
+import { ProductSearchComponent } from '../utils/product-search/product-search.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule,ProductSearchComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

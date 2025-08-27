@@ -10,6 +10,7 @@ import { SharedCartService } from '../../services/shared-cart.service';
 import { map } from 'rxjs/operators';
 import { NotificationService } from '../../services/notification/notification.service';
 import { ConfirmationModalComponent } from '../../shared/utils/confirmation-modal/confirmation-modal.component';
+import * as LZString from 'lz-string';
 
 // REMOVE this import as 'uuid' is not used here for ID generation.
 // If you still have it, please delete this line:
@@ -148,6 +149,7 @@ getUniqueItemKey(item: CartItem): string {
 
   // Generates and displays the persistent cart link
   shareCart(): void {
+    this.generatePermalink();
     // CORRECTED: Use this.cartService.currentCartItems as it's a direct synchronous property
     const currentItems = this.cartService.currentCartItems;
     if (currentItems.length === 0) {
@@ -156,8 +158,8 @@ getUniqueItemKey(item: CartItem): string {
     }
 
     const sharedId = this.sharedCartService.saveSharedCart(currentItems);
-    this.sharedCartUrl = `${window.location.origin}/shared-cart/${sharedId}`;
-    this.showSharedUrl = true;
+    // this.sharedCartUrl = `${window.location.origin}/shared-cart/${sharedId}`;
+    // this.showSharedUrl = true;
 
     if (navigator.clipboard) {
       navigator.clipboard.writeText(this.sharedCartUrl).then(() => {
@@ -174,6 +176,7 @@ getUniqueItemKey(item: CartItem): string {
 
   // REVISED: Shares the order details with a persistent link via WhatsApp
   shareViaWhatsApp(): void {
+    
     // 1. Ensure the shared cart URL is generated first
     if (!this.sharedCartUrl) {
       // If the link hasn't been generated, generate it.
@@ -211,7 +214,7 @@ getUniqueItemKey(item: CartItem): string {
     // Use the sharedId from the URL as the "Cart ID" for the message
     const orderId = this.sharedCartUrl.split('/').pop() || 'N/A'; // Extracts the ID from the generated URL
 
-    let message = `*🛒 Your Cart Details (ID: ${orderId}) 🛒*\n\n`; // Bold heading for WhatsApp
+    let message = `*🛒 Your Cart Details 🛒*\n\n`; // Bold heading for WhatsApp
     message += `*Items:*\n`; // Bold subheading
 
     currentItems.forEach((item, index) => {
@@ -223,7 +226,7 @@ getUniqueItemKey(item: CartItem): string {
     message += `\n--------------------------\n`;
     message += `*📦 Total Items:* ${currentItemCount}\n`; // Bold total items
     message += `*💰 Grand Total:* *₹${currentTotal.toFixed(2)}*\n`; // Bold grand total
-    message += `*🚚 Shipping:* FREE\n`; // Assuming shipping is always free
+    message += `*🚚 Shipping:* T&C\n`; // Assuming shipping is always free
     message += `--------------------------\n\n`;
     message += `Click here to view your cart:\n${this.sharedCartUrl}\n\n`; // Include the persistent link
     message += `Thank you for your interest! 😊`;
@@ -343,7 +346,7 @@ getUniqueItemKey(item: CartItem): string {
    * Confirms and removes all selected items from the cart.
    */
   confirmDeletion(): void {
-    debugger
+    
     if (this.itemToRemove) {
       // Logic for single-item deletion
       this.cartService.removeFromCart(this.itemToRemove.productId, this.itemToRemove.unitLabel);
@@ -383,6 +386,35 @@ getUniqueItemKey(item: CartItem): string {
     this.showConfirmationModal = false;
     this.itemToRemove = null; // Clear any pending single-item deletion
   }
-  
+  generatePermalink(): void {
+    const currentItems = this.cartService.currentCartItems;
+    if (currentItems.length === 0) {
+      this.notificationService.showNotification({
+        message: 'Your cart is empty. Add products to generate a shareable link.',
+        type: 'warning',
+        duration: 3000
+      });
+      return;
+    }
+
+    
+    // 1. Convert cart to JSON
+    const jsonString = JSON.stringify(currentItems);
+    const encodedData = btoa(jsonString);
+     // 2. Compress and encode for URL
+     const compressed = LZString.compressToEncodedURIComponent(encodedData);
+    this.sharedCartUrl = `${window.location.origin}/shared-cart?cartData=${compressed}`;
+    this.showSharedUrl = true;
+
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(this.sharedCartUrl).then(() => {
+        this.notificationService.showNotification({
+          message: 'Cart link copied to clipboard!',
+          type: 'success',
+          duration: 3000
+        });
+      });
+    }
+  }
 
 }

@@ -1,458 +1,1227 @@
 {
   
-    "products": [
-      {
-        "id": "1",
-        "name": "Bellam Gavvalu",
-        "imageUrls": [
-          "assets/images/Sweets/BellamGavvalu/1.jpg",
-          "assets/images/Sweets/BellamGavvalu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 120,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 2 },
-          { "label": "1kg", "priceFactor": 3.67 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "2",
-        "name": "Tokkudu Laddu",
-        "imageUrls": [
-          "assets/images/Sweets/TokkuduLaddu/1.jpg",
-          "assets/images/Sweets/TokkuduLaddu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 160,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.88 },
-          { "label": "1kg", "priceFactor": 3.63 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "3",
-        "name": "Pakundalu",
-        "imageUrls": [
-          "assets/images/Sweets/Pakundalu/1.jpg",
-          "assets/images/Sweets/Pakundalu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 150,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.87 },
-          { "label": "1kg", "priceFactor": 3.73 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "4",
-        "name": "Gorumitilu Bellam",
-        "imageUrls": [
-          "assets/images/Sweets/GorumitiluBellam/1.jpg",
-          "assets/images/Sweets/GorumitiluBellam/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 160,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.88 },
-          { "label": "1kg", "priceFactor": 3.63 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "5",
-        "name": "Nuvvula Laddu",
-        "imageUrls": [
-          "assets/images/Sweets/NuvvulaLaddu/1.jpg",
-          "assets/images/Sweets/NuvvulaLaddu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 150,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.87 },
-          { "label": "1kg", "priceFactor": 3.60 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "6",
-        "name": "Milk Mysorepak",
-        "imageUrls": [
-          "assets/images/Sweets/MilkMysorepak/1.jpg",
-          "assets/images/Sweets/MilkMysorepak/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 255,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.92 },
-          { "label": "1kg", "priceFactor": 3.61 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "7",
-        "name": "Boondi Achu",
-        "imageUrls": [
-          "assets/images/Sweets/BoondiAchu/1.jpg",
-          "assets/images/Sweets/BoondiAchu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 150,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.87 },
-          { "label": "1kg", "priceFactor": 3.60 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "8",
-        "name": "Sweet Kommulu Bellam",
-        "imageUrls": [
-          "assets/images/Sweets/SweetKommuluBellam/1.jpg",
-          "assets/images/Sweets/SweetKommuluBellam/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 140,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.86 },
-          { "label": "1kg", "priceFactor": 3.50 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "9",
-        "name": "Papdi",
-        "imageUrls": [
-          "assets/images/Sweets/Papdi/1.jpg",
-          "assets/images/Sweets/Papdi/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 100,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.80 },
-          { "label": "1kg", "priceFactor": 3.50 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "10",
-        "name": "Madatha Kaja",
-        "imageUrls": [
-          "assets/images/Sweets/MadathaKaja/1.jpg",
-          "assets/images/Sweets/MadathaKaja/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 175,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.88 },
-          { "label": "1kg", "priceFactor": 3.43 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "11",
-        "name": "Palakova",
-        "imageUrls": [
-          "assets/images/Sweets/Palakova/1.jpg",
-          "assets/images/Sweets/Palakova/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 200,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 2 },
-          { "label": "1kg", "priceFactor": 4 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "12",
-        "name": "Nuvvula Ariselu",
-        "imageUrls": [
-          "assets/images/Sweets/NuvvulaAriselu/1.jpg",
-          "assets/images/Sweets/NuvvulaAriselu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 140,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.93 },
-          { "label": "1kg", "priceFactor": 3.71 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "13",
-        "name": "Kajjikayalu with Nupappu",
-        "imageUrls": [
-          "assets/images/Sweets/KajjikayaluwithNupappu/1.jpg",
-          "assets/images/Sweets/KajjikayaluwithNupappu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 30,
-        "units": [
-          { "label": "1pc", "priceFactor": 1 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "14",
-        "name": "Kajjikayalu with Kobbari",
-        "imageUrls": [
-          "assets/images/Sweets/KajjikayaluwithKobbari/1.jpg",
-          "assets/images/Sweets/KajjikayaluwithKobbari/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 25,
-        "units": [
-          { "label": "1pc", "priceFactor": 1 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "15",
-        "name": "Nethi Ariselu Plain",
-        "imageUrls": [
-          "assets/images/Sweets/NethiAriseluPlain/1.jpg",
-          "assets/images/Sweets/NethiAriseluPlain/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 380,
-        "units": [
-          { "label": "500g", "priceFactor": 1 },
-          { "label": "1kg", "priceFactor": 2 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "16",
-        "name": "Chitti Gottam Kaja (Ghee)",
-        "imageUrls": [
-          "assets/images/Sweets/ChittiGottamKaja(Ghee)/1.jpg",
-          "assets/images/Sweets/ChittiGottamKaja(Ghee)/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 200,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 2 },
-          { "label": "1kg", "priceFactor": 4 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "17",
-        "name": "Palli Laddu",
-        "imageUrls": [
-          "assets/images/Sweets/PalliLaddu/1.jpg",
-          "assets/images/Sweets/PalliLaddu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 120,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.92 },
-          { "label": "1kg", "priceFactor": 3.75 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "18",
-        "name": "Bellam Sunnundalu",
-        "imageUrls": [
-          "assets/images/Sweets/BellamSunnundalu/1.jpg",
-          "assets/images/Sweets/BellamSunnundalu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 190,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.89 },
-          { "label": "1kg", "priceFactor": 3.42 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "19",
-        "name": "Boondi Laddu",
-        "imageUrls": [
-          "assets/images/Sweets/BoondiLaddu/1.jpg",
-          "assets/images/Sweets/BoondiLaddu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 160,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.62 },
-          { "label": "1kg", "priceFactor": 3.12 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "20",
-        "name": "Nethi Ravva Laddu",
-        "imageUrls": [
-          "assets/images/Sweets/NethiRavvaLaddu/1.jpg",
-          "assets/images/Sweets/NethiRavvaLaddu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 120,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 2 },
-          { "label": "1kg", "priceFactor": 3.75 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "21",
-        "name": "Mysore Pak Normal",
-        "imageUrls": [
-          "assets/images/Sweets/MysorePakNormal/1.jpg",
-          "assets/images/Sweets/MysorePakNormal/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 130,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.92 },
-          { "label": "1kg", "priceFactor": 3.69 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "22",
-        "name": "Coconut Laddu",
-        "imageUrls": [
-          "assets/images/Sweets/CoconutLaddu/1.jpg",
-          "assets/images/Sweets/CoconutLaddu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 140,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.86 },
-          { "label": "1kg", "priceFactor": 3.50 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "23",
-        "name": "Kaju Bellam Pootha Rekulu",
-        "imageUrls": [
-          "assets/images/Sweets/KajuBellamPoothaRekulu/1.jpg",
-          "assets/images/Sweets/KajuBellamPoothaRekulu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 25,
-        "units": [
-          { "label": "1pc", "priceFactor": 1 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "24",
-        "name": "Kaju Chikki",
-        "imageUrls": [
-          "assets/images/Sweets/KajuChikki/1.jpg",
-          "assets/images/Sweets/KajuChikki/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 249,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 2 },
-          { "label": "1kg", "priceFactor": 4.01 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "25",
-        "name": "Jangri",
-        "imageUrls": [
-          "assets/images/Sweets/Jangri/1.jpg",
-          "assets/images/Sweets/Jangri/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 175,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.88 },
-          { "label": "1kg", "priceFactor": 3.43 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "26",
-        "name": "Venna Undalu",
-        "imageUrls": [
-          "assets/images/Sweets/VennaUndalu/1.jpg",
-          "assets/images/Sweets/VennaUndalu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 150,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.87 },
-          { "label": "1kg", "priceFactor": 3.67 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "27",
-        "name": "Dry Fruit Laddu",
-        "imageUrls": [
-          "assets/images/Sweets/DryFruitLaddu/1.jpg",
-          "assets/images/Sweets/DryFruitLaddu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 250,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 2 },
-          { "label": "1kg", "priceFactor": 4 }
-        ],
-        "category": "sweets"
-      },
-      {
-        "id": "28",
-        "name": "Ragi Laddu",
-        "imageUrls": [
-          "assets/images/Sweets/RagiLaddu/1.jpg",
-          "assets/images/Sweets/RagiLaddu/2.jpg"
-        ],
-        "description": "",
-        "basePrice": 200,
-        "units": [
-          { "label": "250g", "priceFactor": 1 },
-          { "label": "500g", "priceFactor": 1.90 },
-          { "label": "1kg", "priceFactor": 3.75 }
-        ],
-        "category": "sweets"
-      }
-    ]
+  "products": [
+    {
+      "id": "1",
+      "name": "Bellam Gavvalu",
+      "imageUrls": [
+        "assets/images/Sweets/BellamGavvalu/1.jpg",
+        "assets/images/Sweets/BellamGavvalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 120 },
+        { "label": "500g", "priceFactor": 240 },
+        { "label": "1kg", "priceFactor": 440 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "2",
+      "name": "Tokkudu Laddu",
+      "imageUrls": [
+        "assets/images/Sweets/TokkuduLaddu/1.jpg",
+        "assets/images/Sweets/TokkuduLaddu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 160 },
+        { "label": "500g", "priceFactor": 300 },
+        { "label": "1kg", "priceFactor": 580 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "3",
+      "name": "Pakundalu",
+      "imageUrls": [
+        "assets/images/Sweets/Pakundalu/1.jpg",
+        "assets/images/Sweets/Pakundalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 560 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "4",
+      "name": "Gorumitilu Bellam",
+      "imageUrls": [
+        "assets/images/Sweets/GorumitiluBellam/1.jpg",
+        "assets/images/Sweets/GorumitiluBellam/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 160 },
+        { "label": "500g", "priceFactor": 300 },
+        { "label": "1kg", "priceFactor": 580 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "5",
+      "name": "Nuvvula Laddu",
+      "imageUrls": [
+        "assets/images/Sweets/NuvvulaLaddu/1.jpg",
+        "assets/images/Sweets/NuvvulaLaddu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "6",
+      "name": "Milk Mysorepak",
+      "imageUrls": [
+        "assets/images/Sweets/MilkMysorepak/1.jpg",
+        "assets/images/Sweets/MilkMysorepak/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 255 },
+        { "label": "500g", "priceFactor": 490 },
+        { "label": "1kg", "priceFactor": 920 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "7",
+      "name": "Boondi Achu",
+      "imageUrls": [
+        "assets/images/Sweets/BoondiAchu/1.jpg",
+        "assets/images/Sweets/BoondiAchu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "8",
+      "name": "Sweet Kommulu Bellam",
+      "imageUrls": [
+        "assets/images/Sweets/SweetKommuluBellam/1.jpg",
+        "assets/images/Sweets/SweetKommuluBellam/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 260 },
+        { "label": "1kg", "priceFactor": 490 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "9",
+      "name": "Papdi",
+      "imageUrls": [
+        "assets/images/Sweets/Papdi/1.jpg",
+        "assets/images/Sweets/Papdi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 100 },
+        { "label": "500g", "priceFactor": 180 },
+        { "label": "1kg", "priceFactor": 350 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "10",
+      "name": "Madatha Kaja",
+      "imageUrls": [
+        "assets/images/Sweets/MadathaKaja/1.jpg",
+        "assets/images/Sweets/MadathaKaja/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 175 },
+        { "label": "500g", "priceFactor": 330 },
+        { "label": "1kg", "priceFactor": 600 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "11",
+      "name": "Palakova",
+      "imageUrls": [
+        "assets/images/Sweets/Palakova/1.jpg",
+        "assets/images/Sweets/Palakova/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 200 },
+        { "label": "500g", "priceFactor": 400 },
+        { "label": "1kg", "priceFactor": 800 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "12",
+      "name": "Nuvvula Ariselu",
+      "imageUrls": [
+        "assets/images/Sweets/NuvvulaAriselu/1.jpg",
+        "assets/images/Sweets/NuvvulaAriselu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 270 },
+        { "label": "1kg", "priceFactor": 520 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "13",
+      "name": "Kajjikayalu with Nupappu",
+      "imageUrls": [
+        "assets/images/Sweets/KajjikayaluwithNupappu/1.jpg",
+        "assets/images/Sweets/KajjikayaluwithNupappu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "1pc", "priceFactor": 30 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "14",
+      "name": "Kajjikayalu with Kobbari",
+      "imageUrls": [
+        "assets/images/Sweets/KajjikayaluwithKobbari/1.jpg",
+        "assets/images/Sweets/KajjikayaluwithKobbari/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "1pc", "priceFactor": 25 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "15",
+      "name": "Nethi Ariselu Plain",
+      "imageUrls": [
+        "assets/images/Sweets/NethiAriseluPlain/1.jpg",
+        "assets/images/Sweets/NethiAriseluPlain/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "500g", "priceFactor": 380 },
+        { "label": "1kg", "priceFactor": 760 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "16",
+      "name": "Chitti Gottam Kaja (Ghee)",
+      "imageUrls": [
+        "assets/images/Sweets/ChittiGottamKaja(Ghee)/1.jpg",
+        "assets/images/Sweets/ChittiGottamKaja(Ghee)/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 200 },
+        { "label": "500g", "priceFactor": 400 },
+        { "label": "1kg", "priceFactor": 800 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "17",
+      "name": "Palli Laddu",
+      "imageUrls": [
+        "assets/images/Sweets/PalliLaddu/1.jpg",
+        "assets/images/Sweets/PalliLaddu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 120 },
+        { "label": "500g", "priceFactor": 230 },
+        { "label": "1kg", "priceFactor": 450 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "18",
+      "name": "Bellam Sunnundalu",
+      "imageUrls": [
+        "assets/images/Sweets/BellamSunnundalu/1.jpg",
+        "assets/images/Sweets/BellamSunnundalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 190 },
+        { "label": "500g", "priceFactor": 360 },
+        { "label": "1kg", "priceFactor": 650 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "19",
+      "name": "Boondi Laddu",
+      "imageUrls": [
+        "assets/images/Sweets/BoondiLaddu/1.jpg",
+        "assets/images/Sweets/BoondiLaddu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 160 },
+        { "label": "500g", "priceFactor": 260 },
+        { "label": "1kg", "priceFactor": 500 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "20",
+      "name": "Nethi Ravva Laddu",
+      "imageUrls": [
+        "assets/images/Sweets/NethiRavvaLaddu/1.jpg",
+        "assets/images/Sweets/NethiRavvaLaddu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 120 },
+        { "label": "500g", "priceFactor": 240 },
+        { "label": "1kg", "priceFactor": 450 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "21",
+      "name": "Mysore Pak Normal",
+      "imageUrls": [
+        "assets/images/Sweets/MysorePakNormal/1.jpg",
+        "assets/images/Sweets/MysorePakNormal/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 130 },
+        { "label": "500g", "priceFactor": 250 },
+        { "label": "1kg", "priceFactor": 480 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "22",
+      "name": "Coconut Laddu",
+      "imageUrls": [
+        "assets/images/Sweets/CoconutLaddu/1.jpg",
+        "assets/images/Sweets/CoconutLaddu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 260 },
+        { "label": "1kg", "priceFactor": 490 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "23",
+      "name": "Kaju Bellam Pootha Rekulu",
+      "imageUrls": [
+        "assets/images/Sweets/KajuBellamPoothaRekulu/1.jpg",
+        "assets/images/Sweets/KajuBellamPoothaRekulu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "1pc", "priceFactor": 25 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "24",
+      "name": "Kaju Chikki",
+      "imageUrls": [
+        "assets/images/Sweets/KajuChikki/1.jpg",
+        "assets/images/Sweets/KajuChikki/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 249 },
+        { "label": "500g", "priceFactor": 498 },
+        { "label": "1kg", "priceFactor": 999 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "25",
+      "name": "Jangri",
+      "imageUrls": [
+        "assets/images/Sweets/Jangri/1.jpg",
+        "assets/images/Sweets/Jangri/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 175 },
+        { "label": "500g", "priceFactor": 330 },
+        { "label": "1kg", "priceFactor": 600 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "26",
+      "name": "Venna Undalu",
+      "imageUrls": [
+        "assets/images/Sweets/VennaUndalu/1.jpg",
+        "assets/images/Sweets/VennaUndalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 550 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "27",
+      "name": "Dry Fruit Laddu",
+      "imageUrls": [
+        "assets/images/Sweets/DryFruitLaddu/1.jpg",
+        "assets/images/Sweets/DryFruitLaddu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 250 },
+        { "label": "500g", "priceFactor": 500 },
+        { "label": "1kg", "priceFactor": 1000 }
+      ],
+      "category": "sweets"
+    },
+    {
+      "id": "28",
+      "name": "Ragi Laddu",
+      "imageUrls": [
+        "assets/images/Sweets/RagiLaddu/1.jpg",
+        "assets/images/Sweets/RagiLaddu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 200 },
+        { "label": "500g", "priceFactor": 380 },
+        { "label": "1kg", "priceFactor": 750 }
+      ],
+      "category": "sweets"
+    },
+
+
+    {
+      "id": "101",
+      "name": "Vamu Kommulu",
+      "imageUrls": [
+        "assets/images/hots/VamuKommulu/1.jpg",
+        "assets/images/hots/VamuKommulu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 260 },
+        { "label": "1kg", "priceFactor": 490 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "102",
+      "name": "Chitti Appadalu",
+      "imageUrls": [
+        "assets/images/hots/ChittiAppadalu/1.jpg",
+        "assets/images/hots/ChittiAppadalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 550 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "103",
+      "name": "Janthikalu",
+      "imageUrls": [
+        "assets/images/hots/Janthikalu/1.jpg",
+        "assets/images/hots/Janthikalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 120 },
+        { "label": "500g", "priceFactor": 240 },
+        { "label": "1kg", "priceFactor": 440 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "104",
+      "name": "Karapu Boondi",
+      "imageUrls": [
+        "assets/images/hots/KarapuBoondi/1.jpg",
+        "assets/images/hots/KarapuBoondi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 100 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "105",
+      "name": "Vamu Pusa / Vamu Karapusa",
+      "imageUrls": [
+        "assets/images/hots/VamuPusaVamuKarapusa/1.jpg",
+        "assets/images/hots/VamuPusaVamuKarapusa/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 260 },
+        { "label": "1kg", "priceFactor": 490 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "106",
+      "name": "Chitti Chegodi",
+      "imageUrls": [
+        "assets/images/hots/ChittiChegodi/1.jpg",
+        "assets/images/hots/ChittiChegodi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 260 },
+        { "label": "1kg", "priceFactor": 510 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "107",
+      "name": "Murukulu",
+      "imageUrls": [
+        "assets/images/hots/Murukulu/1.jpg",
+        "assets/images/hots/Murukulu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 250 },
+        { "label": "1kg", "priceFactor": 550 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "108",
+      "name": "Sanna Karapusa",
+      "imageUrls": [
+        "assets/images/hots/SannaKarapusa/1.jpg",
+        "assets/images/hots/SannaKarapusa/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 160 },
+        { "label": "500g", "priceFactor": 300 },
+        { "label": "1kg", "priceFactor": 580 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "109",
+      "name": "Karam Gavvalu",
+      "imageUrls": [
+        "assets/images/hots/KaramGavvalu/1.jpg",
+        "assets/images/hots/KaramGavvalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 300 },
+        { "label": "1kg", "priceFactor": 500 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "110",
+      "name": "Pappaladabba Special Mixture",
+      "imageUrls": [
+        "assets/images/hots/PappaladabbaSpecialMixture/1.jpg",
+        "assets/images/hots/PappaladabbaSpecialMixture/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 200 },
+        { "label": "500g", "priceFactor": 380 },
+        { "label": "1kg", "priceFactor": 720 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "111",
+      "name": "Chethi Chekkalu",
+      "imageUrls": [
+        "assets/images/hots/ChethiChekkalu/1.jpg",
+        "assets/images/hots/ChethiChekkalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 550 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "112",
+      "name": "Hot Atta Chips / Kaajalu",
+      "imageUrls": [
+        "assets/images/hots/HotAttaChipsKaajalu/1.jpg",
+        "assets/images/hots/HotAttaChipsKaajalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 100 },
+        { "label": "500g", "priceFactor": 180 },
+        { "label": "1kg", "priceFactor": 260 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "113",
+      "name": "Ribbon Pakodi",
+      "imageUrls": [
+        "assets/images/hots/RibbonPakodi/1.jpg",
+        "assets/images/hots/RibbonPakodi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "114",
+      "name": "Challa Kommulu",
+      "imageUrls": [
+        "assets/images/hots/ChallaKommulu/1.jpg",
+        "assets/images/hots/ChallaKommulu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "115",
+      "name": "Jeedipappu Pakodi",
+      "imageUrls": [
+        "assets/images/hots/JeedipappuPakodi/1.jpg",
+        "assets/images/hots/JeedipappuPakodi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 300 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "116",
+      "name": "Masala Cashew",
+      "imageUrls": [
+        "assets/images/hots/MasalaCashew/1.jpg",
+        "assets/images/hots/MasalaCashew/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 250 },
+        { "label": "500g", "priceFactor": 500 },
+        { "label": "1kg", "priceFactor": 1000 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "117",
+      "name": "Masala Palli",
+      "imageUrls": [
+        "assets/images/hots/MasalaPalli/1.jpg",
+        "assets/images/hots/MasalaPalli/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 550 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "118",
+      "name": "Karam Senagapappu",
+      "imageUrls": [
+        "assets/images/hots/KaramSenagapappu/1.jpg",
+        "assets/images/hots/KaramSenagapappu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 120 },
+        { "label": "500g", "priceFactor": 200 },
+        { "label": "1kg", "priceFactor": 400 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "119",
+      "name": "Hot Gorumiti",
+      "imageUrls": [
+        "assets/images/hots/HotGorumiti/1.jpg",
+        "assets/images/hots/HotGorumiti/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 550 }
+      ],
+      "category": "hots"
+    },
+    {
+      "id": "120",
+      "name": "Challa Undalu",
+      "imageUrls": [
+        "assets/images/hots/ChallaUndalu/1.jpg",
+        "assets/images/hots/ChallaUndalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 120 },
+        { "label": "500g", "priceFactor": 240 },
+        { "label": "1kg", "priceFactor": 440 }
+      ],
+      "category": "hots"
+    },
+
+    {
+      "id": "201",
+      "name": "Avakaya",
+      "imageUrls": [
+        "assets/images/Pickles/Avakaya/1.jpg",
+        "assets/images/Pickles/Avakaya/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 520 }
+      ],
+      "category": "pickles"
+    },
+    {
+      "id": "202",
+      "name": "Gongura Pickle",
+      "imageUrls": [
+        "assets/images/Pickles/GonguraPickle/1.jpg",
+        "assets/images/Pickles/GonguraPickle/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 125 },
+        { "label": "500g", "priceFactor": 250 },
+        { "label": "1kg", "priceFactor": 500 }
+      ],
+      "category": "pickles"
+    },
+    {
+      "id": "203",
+      "name": "Tomato Pickle",
+      "imageUrls": [
+        "assets/images/Pickles/TomatoPickle/1.jpg",
+        "assets/images/Pickles/TomatoPickle/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 560 }
+      ],
+      "category": "pickles"
+    },
+    {
+      "id": "204",
+      "name": "Kottimera Avakaya",
+      "imageUrls": [
+        "assets/images/Pickles/KottimeraAvakaya/1.jpg",
+        "assets/images/Pickles/KottimeraAvakaya/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 125 },
+        { "label": "500g", "priceFactor": 250 },
+        { "label": "1kg", "priceFactor": 500 }
+      ],
+      "category": "pickles"
+    },
+    {
+      "id": "205",
+      "name": "Usirikaya Avakaya",
+      "imageUrls": [
+        "assets/images/Pickles/UsirikayaAvakaya/1.jpg",
+        "assets/images/Pickles/UsirikayaAvakaya/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "pickles"
+    },
+    {
+      "id": "206",
+      "name": "Pandumirchi Pickle",
+      "imageUrls": [
+        "assets/images/Pickles/PandumirchiPickle/1.jpg",
+        "assets/images/Pickles/PandumirchiPickle/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 250 },
+        { "label": "1kg", "priceFactor": 500 }
+      ],
+      "category": "pickles"
+    },
+    {
+      "id": "207",
+      "name": "Allam Pachadi",
+      "imageUrls": [
+        "assets/images/Pickles/AllamPachadi/1.jpg",
+        "assets/images/Pickles/AllamPachadi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 560 }
+      ],
+      "category": "pickles"
+    },
+    {
+      "id": "208",
+      "name": "Maagaya",
+      "imageUrls": [
+        "assets/images/Pickles/Maagaya/1.jpg",
+        "assets/images/Pickles/Maagaya/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 520 }
+      ],
+      "category": "pickles"
+    },
+    {
+      "id": "209",
+      "name": "Nimmakaya Pachadi",
+      "imageUrls": [
+        "assets/images/Pickles/NimmakayaPachadi/1.jpg",
+        "assets/images/Pickles/NimmakayaPachadi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 520 }
+      ],
+      "category": "pickles"
+    },
+    {
+      "id": "210",
+      "name": "Cauliflower Avakaya",
+      "imageUrls": [
+        "assets/images/Pickles/CauliflowerAvakaya/1.jpg",
+        "assets/images/Pickles/CauliflowerAvakaya/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 520 }
+      ],
+      "category": "pickles"
+    },
+    {
+      "id": "211",
+      "name": "Nallapachhadi",
+      "imageUrls": [
+        "assets/images/Pickles/Nallapachhadi/1.jpg",
+        "assets/images/Pickles/Nallapachhadi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 80 }
+      ],
+      "category": "pickles"
+    },
+    {
+      "id": "301",
+      "name": "Idli Karam Podi",
+      "imageUrls": [
+        "assets/images/Podulu/IdliKaramPodi/1.jpg",
+        "assets/images/Podulu/IdliKaramPodi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "podulu"
+    },
+    {
+      "id": "302",
+      "name": "Kandi Podi",
+      "imageUrls": [
+        "assets/images/Podulu/KandiPodi/1.jpg",
+        "assets/images/Podulu/KandiPodi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "podulu"
+    },
+    {
+      "id": "303",
+      "name": "Palli Karampodi",
+      "imageUrls": [
+        "assets/images/Podulu/PalliKarampodi/1.jpg",
+        "assets/images/Podulu/PalliKarampodi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "podulu"
+    },
+    {
+      "id": "304",
+      "name": "Vellulli Karam Podi",
+      "imageUrls": [
+        "assets/images/Podulu/VellulliKaramPodi/1.jpg",
+        "assets/images/Podulu/VellulliKaramPodi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 140 },
+        { "label": "500g", "priceFactor": 260 },
+        { "label": "1kg", "priceFactor": 520 }
+      ],
+      "category": "podulu"
+    },
+    {
+      "id": "305",
+      "name": "Munagaaku Karam Podi",
+      "imageUrls": [
+        "assets/images/Podulu/MunagaakuKaramPodi/1.jpg",
+        "assets/images/Podulu/MunagaakuKaramPodi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 200 },
+        { "label": "500g", "priceFactor": 370 },
+        { "label": "1kg", "priceFactor": 720 }
+      ],
+      "category": "podulu"
+    },
+    {
+      "id": "306",
+      "name": "Karivepaku Karam Podi",
+      "imageUrls": [
+        "assets/images/Podulu/KarivepakuKaramPodi/1.jpg",
+        "assets/images/Podulu/KarivepakuKaramPodi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "podulu"
+    },
+    {
+      "id": "307",
+      "name": "Nuvvula Karam Podi",
+      "imageUrls": [
+        "assets/images/Podulu/NuvvulaKaramPodi/1.jpg",
+        "assets/images/Podulu/NuvvulaKaramPodi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "podulu"
+    },
+    {
+      "id": "308",
+      "name": "Avasiginjala Podi",
+      "imageUrls": [
+        "assets/images/Podulu/AvasiginjalaPodi/1.jpg",
+        "assets/images/Podulu/AvasiginjalaPodi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 160 },
+        { "label": "500g", "priceFactor": 320 },
+        { "label": "1kg", "priceFactor": 600 }
+      ],
+      "category": "podulu"
+    },
+    {
+      "id": "309",
+      "name": "Pappulapodi",
+      "imageUrls": [
+        "assets/images/Podulu/Pappulapodi/1.jpg",
+        "assets/images/Podulu/Pappulapodi/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "podulu"
+    },
+
+
+    {
+      "id": "401",
+      "name": "Gummadi Vadiyaalu",
+      "imageUrls": [
+        "assets/images/Vadiyaalu/GummadiVadiyaalu/1.jpg",
+        "assets/images/Vadiyaalu/GummadiVadiyaalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 180 },
+        { "label": "500g", "priceFactor": 350 },
+        { "label": "1kg", "priceFactor": 680 }
+      ],
+      "category": "vadiyaalu"
+    },
+    {
+      "id": "402",
+      "name": "Challa Mirapakaayalu",
+      "imageUrls": [
+        "assets/images/Vadiyaalu/ChallaMirapakaayalu/1.jpg",
+        "assets/images/Vadiyaalu/ChallaMirapakaayalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 200 },
+        { "label": "500g", "priceFactor": 370 },
+        { "label": "1kg", "priceFactor": 720 }
+      ],
+      "category": "vadiyaalu"
+    },
+    {
+      "id": "403",
+      "name": "Biyam Pindi Vadiyaalu",
+      "imageUrls": [
+        "assets/images/Vadiyaalu/BiyamPindiVadiyaalu/1.jpg",
+        "assets/images/Vadiyaalu/BiyamPindiVadiyaalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 100 },
+        { "label": "500g", "priceFactor": 180 },
+        { "label": "1kg", "priceFactor": 350 }
+      ],
+      "category": "vadiyaalu"
+    },
+    {
+      "id": "404",
+      "name": "Minapa Vadiyaalu",
+      "imageUrls": [
+        "assets/images/Vadiyaalu/MinapaVadiyaalu/1.jpg",
+        "assets/images/Vadiyaalu/MinapaVadiyaalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 160 },
+        { "label": "500g", "priceFactor": 300 },
+        { "label": "1kg", "priceFactor": 580 }
+      ],
+      "category": "vadiyaalu"
+    },
+    {
+      "id": "405",
+      "name": "Aviri Vadiyalu (Carrot/Beetroot)",
+      "imageUrls": [
+        "assets/images/Vadiyaalu/AviriVadiyalu/1.jpg",
+        "assets/images/Vadiyaalu/AviriVadiyalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "vadiyaalu"
+    },
+    {
+      "id": "406",
+      "name": "Janthika Vadiyaalu",
+      "imageUrls": [
+        "assets/images/Vadiyaalu/JanthikaVadiyaalu/1.jpg",
+        "assets/images/Vadiyaalu/JanthikaVadiyaalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "vadiyaalu"
+    },
+    {
+      "id": "407",
+      "name": "Pottu Vadiyaalu",
+      "imageUrls": [
+        "assets/images/Vadiyaalu/PottuVadiyaalu/1.jpg",
+        "assets/images/Vadiyaalu/PottuVadiyaalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 100 },
+        { "label": "500g", "priceFactor": 180 },
+        { "label": "1kg", "priceFactor": 270 }
+      ],
+      "category": "vadiyaalu"
+    },
+    {
+      "id": "408",
+      "name": "Pesara Vadiyaalu",
+      "imageUrls": [
+        "assets/images/Vadiyaalu/PesaraVadiyaalu/1.jpg",
+        "assets/images/Vadiyaalu/PesaraVadiyaalu/2.jpg"
+      ],
+      "description": "",
+      "basePrice": 1,
+      "units": [
+        { "label": "250g", "priceFactor": 150 },
+        { "label": "500g", "priceFactor": 280 },
+        { "label": "1kg", "priceFactor": 540 }
+      ],
+      "category": "vadiyaalu"
+    }
+  ]
   ,
     "categories": [
       { "name": "All Products", "value": "all" },
       { "name": "Sweets", "value": "sweets", "imageUrl": "https://pappaladabba.com/wp-content/uploads/2024/01/S_0007.jpg" },
-      { "name": "Snacks", "value": "snacks", "imageUrl": "https://pappaladabba.com/wp-content/uploads/2024/01/S_0016.jpg" },
+      { "name": "Hots", "value": "hots", "imageUrl": "" },
       { "name": "Pickles", "value": "pickles", "imageUrl": "https://pappaladabba.com/wp-content/uploads/2024/01/P_0003-1.jpg" },
       { "name": "Podulu", "value": "podulu", "imageUrl": "https://pappaladabba.com/wp-content/uploads/2023/10/Palli-Karampodi-v01.jpg" },
-      { "name": "Vadiyaalu", "value": "vadiyaalu", "imageUrl": "https://pappaladabba.com/wp-content/uploads/2024/01/Biyyam-Pindi-Vadiyaalu-e1704541649774.jpg" },
-      { "name": "Bulk Orders", "value": "bulk-orders", "imageUrl": "https://pappaladabba.com/wp-content/uploads/2023/10/1000X1000v01pal.jpg" }
-    ],
+      { "name": "Vadiyaalu", "value": "vadiyaalu", "imageUrl": "https://pappaladabba.com/wp-content/uploads/2024/01/Biyyam-Pindi-Vadiyaalu-e1704541649774.jpg" }
+     
+      ],
     "featuredProducts": [
       { "id": "1", "name": "Bellam Gavvalu", "price": 120, "imageUrl": "https://pappaladabba.com/wp-content/uploads/2024/01/1000-X1000_v02bm.jpg" },
       { "id": "2", "name": "Kaju Katli", "price": 250, "imageUrl": "https://pappaladabba.com/wp-content/uploads/2023/10/1000X1000v02kkl-300x300.jpg" },

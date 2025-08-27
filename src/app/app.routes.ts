@@ -20,7 +20,7 @@ export const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'products/:category', component: ProductsComponent }, // Route for category filtering
   { path: 'product-details/:id', component: ProductDetailsComponent }, // <--- ADD THIS ROUTE
-  { path: 'shared-cart/:cartid', component: SharedCartViewComponent }, // <--- New Route for shared cart
+  { path: 'shared-cart', component: SharedCartViewComponent }, // <--- New Route for shared cart
   { path: 'cart', component: CartComponent },
   { path: 'payment', component: CheckoutComponent }, // Route for your checkout page
   { path: 'checkout', redirectTo: '/payment', pathMatch: 'full' }, // Optional: redirect from /checkout to /payment

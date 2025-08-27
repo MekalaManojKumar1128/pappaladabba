@@ -4,21 +4,16 @@ import { HttpClient } from '@angular/common/http'; // Import HttpClient
 import { Observable, BehaviorSubject } from 'rxjs';
 import { map, tap, catchError } from 'rxjs/operators';
 import { Product } from '../../shared/models/product.model';
+import { Category } from '../../shared/models/category.model';
 
 
 // Define interfaces for the structure of your JSON data
 interface AppData {
   products: Product[];
-  categories: { name: string; value: string; imageUrl?: string }[]; // imageUrl is optional for 'All Products'
+  categories: Category[]; // imageUrl is optional for 'All Products'
   featuredProducts: { id: string; name: string; price: number; imageUrl: string }[];
 }
 
-// Define an interface for your category data (consistent with ProductsComponent)
-interface Category {
-  name: string;
-  value: string;
-  imageUrl?: string; // imageUrl is optional
-}
 
 @Injectable({
   providedIn: 'root'
